@@ -6,10 +6,10 @@ const ItemSchema = new Schema({
   name: { type: String, required: true, maxLength: 100},
   description: { type: String, required: true},
   category: { type: Schema.Types.ObjectId, refPath: "item_type"},
-  car_type: { type: String, enum: ['Charging, Accessory'], required: true},
+  item_type: { type: String, required: true},
   price: { type: Number, required: true},
   stock: { type: Number, required: true},
-  compatible: { type: Array, required: true, enum: ["Model 3", "Model Y", "Model S", "Model X"]}
+  compatible: { type: Array, required: true}
 });
 
 ItemSchema.virtual("url").get(function() {
