@@ -4,10 +4,7 @@ const Accessory = require("../models/accessory");
 const Cars = require("../models/cars");
 const Charging = require("../models/charging")
 const Energy = require("../models/energy")
-const EnergyProduct = require("../models/energyproduct")
-const Item = require("../models/item")
 const Trucks = require("../models/trucks")
-const Vehicle = require("../models/vehicle")
 
 // Displays catalog home page
 exports.catalog = (req, res, next) => {
@@ -32,7 +29,7 @@ exports.catalog = (req, res, next) => {
     (err, results) => {
       res.render("catalog", {
         title: "Inventory Catalog",
-        data: results
+        data: results,
       });
     }
   )
