@@ -13,6 +13,12 @@ router.get("/", cars_controller.catalog);
 
 /// CARS ROUTES ///
 
+// GET request for creating a car
+router.get("/cars/create", cars_controller.car_create_get);
+
+// POST request for creating car
+router.post("/cars/create", cars_controller.car_create_post);
+
 // GET request for list of all Car items
 router.get("/cars", cars_controller.car_list);
 

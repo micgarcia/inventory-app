@@ -1,0 +1,40 @@
+extends layout
+
+block content
+  h1= title
+
+  form(method='POST' action='')
+    div
+      label(for='name') Name:
+      select(type='select' placeholder='Select Model' name='name' required='true')
+        option(value='Tesla Model 3') Model 3
+        option(value='Tesla Model Y') Model Y
+        option(value='Tesla Model S') Model S
+        option(value='Tesla Model X') Model X
+
+    div
+      label(for='trim') Trim:
+      select(type='select' placeholder='Select Trim' name='trim' required='true')
+        option(value='Rear Wheel Drive') Rear Wheel Drive
+        option(value='Long Range') Long Range
+        option(value='Performance') Performance
+        option(value='Plaid') Plaid
+
+    div
+      label(for='price') Price:
+      input(type='number' name='price' required='true' value=(undefined===car ? '' : car.price))
+
+    div
+      label(for='description') Description:
+      textarea(type='textarea' name='description' required='true') #{undefined===car ? '' : car.description}
+
+    div
+      label(for='stock') Stock:
+      input(type='number' name='stock' required='true' value=(undefined===car ? '' : car.stock))
+
+    button(type='submit') Submit
+
+  if errors
+    ul
+      for error in errors
+        li!= error.msg

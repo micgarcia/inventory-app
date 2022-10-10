@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1= title
+
+  ul
+    each car in car_list
+      div
+        li
+          a(href=car.url) Name: #{car.name}
+          p Trim: #{car.trim}
+          p Price: $#{car.price}
