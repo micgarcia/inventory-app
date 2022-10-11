@@ -168,9 +168,63 @@ exports.car_update_get = (req, res, next) => {
   )
 }
 
-exports.car_update_post = (req, res, next) => {
-  res.send("Car Update post");
-}
+exports.car_update_post = [
+
+  // Validate and sanitize fields
+  body("name", "Name must not be empty.")
+    .trim()
+    .isLength({ min: 1})
+    .escape(),
+  body("trim", "Trim must not be empty.")
+    .trim()
+    .isLength({ min: 1})
+    .escape(),
+  body("price", "Price must not be empty.")
+    .trim()
+    .isLength({ min: 1})
+    .escape(),
+  body("description", "Description must not be empty.")
+    .trim()
+    .isLength({min:1})
+    .escape(),
+  body("stock", "Stock must not be empty.")
+    .trim()
+    .isLength({min:1})
+    .escape(),
+
+  (req, res, next) => {
+    // Extract the validation errors from a request
+    const errors = validationResult(req);
+
+    const car = new Cars({
+      name: req.body.name,
+      trim: req.body.trim,
+      price: req.body.price,
+      description: req.body.description,
+      stock: req.body.stock,
+      _id: req.params.id
+    });
+
+    if (!errors.isEmpty()) {
+      // There are errors, render form again with values
+
+      res.render("car_form", {
+        title: "Add Car",
+        car,
+        errors: errors.array()
+      });
+      return;
+    }
+
+    Cars.findByIdAndUpdate(req.params.id, car, {}, (err, thecar) => {
+      if (err) {
+        return next(err);
+      }
+
+      res.redirect(thecar.url);
+    })
+  }
+]
 
 exports.car_delete_get = (req, res, next) => {
   res.send("car delete get");
