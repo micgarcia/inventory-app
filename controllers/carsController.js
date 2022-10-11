@@ -146,5 +146,36 @@ exports.car_create_post = [
       res.redirect(car.url);
     })
   }
-
 ]
+
+exports.car_update_get = (req, res, next) => {
+  async.parallel(
+    {
+      car(callback) {
+        Cars.findById(req.params.id)
+          .exec(callback);
+      },
+    },
+    (err, results) => {
+      if (err) {
+        return next(err);
+      }
+      res.render("car_form", {
+        title: results.car.name,
+        car: results.car
+      })
+    }
+  )
+}
+
+exports.car_update_post = (req, res, next) => {
+  res.send("Car Update post");
+}
+
+exports.car_delete_get = (req, res, next) => {
+  res.send("car delete get");
+}
+
+exports.car_delete_post = (req, res, next) => {
+  res.send('car delete post');
+}

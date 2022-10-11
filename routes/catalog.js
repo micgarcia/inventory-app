@@ -19,11 +19,23 @@ router.get("/cars/create", cars_controller.car_create_get);
 // POST request for creating car
 router.post("/cars/create", cars_controller.car_create_post);
 
+// GET request for updating car
+router.get("/cars/:id/update", cars_controller.car_update_get);
+
+// POST request for updating car
+router.post("/cars/:id/update", cars_controller.car_update_post);
+
+// GET request for deleting car
+router.get("/cars/:id/delete", cars_controller.car_delete_get);
+
+// POST request for deleting car
+router.post("/cars/:id/delete", cars_controller.car_delete_post);
+
 // GET request for list of all Car items
 router.get("/cars", cars_controller.car_list);
 
 // GET request for one Car details
-router.get("/cars/:id", cars_controller.car_detail)
+router.get("/cars/:id", cars_controller.car_detail);
 
 
 
