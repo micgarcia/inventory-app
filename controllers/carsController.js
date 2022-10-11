@@ -227,7 +227,24 @@ exports.car_update_post = [
 ]
 
 exports.car_delete_get = (req, res, next) => {
-  res.send("car delete get");
+  async.parallel(
+    {
+      car(callback) {
+        Cars.findById(req.params.id)
+          .exec(callback);
+      },
+    },
+    (err, results) => {
+      if (err) {
+        return next(err)
+      }
+
+      res.render("car_delete", {
+        title: 'Delete Car',
+        car: results.car
+      })
+    }
+  );
 }
 
 exports.car_delete_post = (req, res, next) => {
