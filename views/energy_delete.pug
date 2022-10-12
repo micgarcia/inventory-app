@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1= title
+
+  ul
+    li Name: #{energy.name}
+    li Description: #{energy.description}
+    li Price: $#{energy.price}
+    li In-Stock: #{energy.stock}
+
+  p Are you sure you want to delete this energy product?
+
+  form(method='POST' action='')
+    input(type='hidden', name="energyid", required='true', value=energy._id)
+    button(type='submit') Delete

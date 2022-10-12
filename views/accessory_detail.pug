@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  h1= title
+
+  ul
+    li Description: #{accessory.description}
+    li Price: $#{accessory.price}
+    li In-Stock: #{accessory.stock}
+    li Compatible:
+      div
+        each car in accessory.compatible
+          p #{car}
+
+  a(href=`/catalog/accessory/${accessory.id}/update`) Update Accessory
+  a(href='/catalog/accessory') Return To Accessories
+  a(href=`/catalog/accessory/${accessory.id}/delete`) Delete Accessory

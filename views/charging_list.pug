@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1= title
+
+  ul
+    each product in charging_list
+      div
+        li
+          a(href=product.url) Name: #{product.name}
+          p Price: $#{product.price}
+
+  a(href="/catalog/charging/create") Add New Charging Product

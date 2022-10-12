@@ -1,0 +1,48 @@
+extends layout
+
+block content
+  h1= title
+
+  form(method='POST' action='')
+    div
+      label(for='name') Name:
+      select(type='select' placeholder='Select Charging Product' name='name' required='true')
+        option(value='Tesla Wall Connector' selected=(undefined===charging ? false : (charging.name==='Tesla Wall Connector' ? true : false))) Wall Connector
+        option(value='Tesla DC Adaptor' selected=(undefined===charging ? false : (charging.name==='Tesla DC Adaptor' ? true : false))) DC Adaptor
+        option(value='Tesla Mobile Connector' selected=(undefined===charging ? false : (charging.name==='Tesla Mobile Connector' ? true : false))) Mobile Connector
+
+    div
+      label(for='price') Price:
+      input(type='number' name='price' required='true' value=(undefined===charging ? '' : charging.price))
+
+    div
+      label(for='description') Description:
+      textarea(type='textarea' name='description' required='true') #{undefined===charging ? '' : charging.description}
+
+    div
+      label(for='stock') Stock:
+      input(type='number' name='stock' required='true' value=(undefined===charging ? '' : charging.stock))
+
+    fieldset(for='compatible')
+      legend Product is compatible with:
+
+      div
+        input(type='checkbox' name="compatible" value="Tesla Model 3" checked=(undefined===charging ? false : (charging.compatible.includes('Tesla Model 3') ? true : false)))
+        label(for="compatible") Model 3
+
+        input(type='checkbox' name="compatible" value="Tesla Model Y" checked=(undefined===charging ? false : (charging.compatible.includes('Tesla Model Y') ? true : false)))
+        label(for="compatible") Model Y
+
+        input(type='checkbox' name="compatible" value="Tesla Model S" checked=(undefined===charging ? false : (charging.compatible.includes('Tesla Model S') ? true : false)))
+        label(for="compatible") Model S
+
+        input(type='checkbox' name="compatible" value="Tesla Model X" checked=(undefined===charging ? false : (charging.compatible.includes('Tesla Model X') ? true : false)))
+        label(for="compatible") Model X
+
+
+    button(type='submit') Submit
+
+  if errors
+    ul
+      for error in errors
+        li!= error.msg

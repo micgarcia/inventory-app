@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1= title
+
+  ul
+    each product in energy_list
+      div
+        li
+          a(href=product.url) Name: #{product.name}
+          p Price: $#{product.price}
+
+  a(href="/catalog/energy/create") Add New Energy Product

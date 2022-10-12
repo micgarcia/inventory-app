@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  h1= title
+
+  ul
+    li Name: #{accessory.name}
+    li Description: #{accessory.description}
+    li Price: $#{accessory.price}
+    li In-Stock: #{accessory.stock}
+    li Compatible:
+      div
+        each product in accessory.compatible
+          p #{product}
+
+  p Are you sure you want to delete this energy product?
+
+  form(method='POST' action='')
+    input(type='hidden', name="accessoryid", required='true', value=accessory._id)
+    button(type='submit') Delete
