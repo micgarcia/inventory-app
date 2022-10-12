@@ -7,8 +7,12 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 const catalogRouter = require('./routes/catalog');
+const compression = require('compression');
+const helmet = require('helmet');
 
 var app = express();
+
+app.use(helmet());
 
 const mongoose = require('mongoose');
 const mongoDB = "mongodb+srv://inv-app:invapp01@cluster0.qoiibzv.mongodb.net/inventory-app?retryWrites=true&w=majority";
@@ -24,6 +28,9 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+
+app.use(compression());
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
