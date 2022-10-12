@@ -38,6 +38,16 @@ router.get("/cars", cars_controller.car_list);
 router.get("/cars/:id", cars_controller.car_detail);
 
 
+/// TRUCKS ROUTES ///
+
+
+// GET request for list of all Truck items
+router.get('/trucks', trucks_controller.truck_list);
+
+// GET request for one Truck details
+router.get('/trucks/:id', trucks_controller.truck_detail);
+
+
 
 
 

@@ -1,0 +1,13 @@
+extends layout
+
+block content
+
+  h1= title
+
+  ul
+    each truck in truck_list
+      div
+        li
+          a(href=truck.url) #{truck.name}
+          p Trim: #{truck.trim}
+          p Price: $#{truck.price}

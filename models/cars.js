@@ -14,5 +14,4 @@ CarsSchema.virtual("url").get(function () {
   return `/catalog/cars/${this._id}`;
 });
 
-
 module.exports = mongoose.model("Cars", CarsSchema);
