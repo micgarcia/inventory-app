@@ -50,3 +50,15 @@ exports.truck_detail = (req, res, next) => {
     }
   )
 }
+
+// Renders form for creating new truck
+exports.truck_create_get = (req, res, next) => {
+  res.render("truck_form", {
+    title: "Add Truck",
+  })
+}
+
+// Posts new truck
+exports.truck_create_post = (req, res, next) => {
+  res.send("truck create post")
+}

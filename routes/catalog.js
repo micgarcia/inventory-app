@@ -40,6 +40,11 @@ router.get("/cars/:id", cars_controller.car_detail);
 
 /// TRUCKS ROUTES ///
 
+// GET request for creating truck
+router.get('/trucks/create', trucks_controller.truck_create_get);
+
+// POST request for creating truck
+router.post('/trucks/create', trucks_controller.truck_create_post);
 
 // GET request for list of all Truck items
 router.get('/trucks', trucks_controller.truck_list);
