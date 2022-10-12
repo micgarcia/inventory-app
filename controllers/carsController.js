@@ -248,5 +248,26 @@ exports.car_delete_get = (req, res, next) => {
 }
 
 exports.car_delete_post = (req, res, next) => {
-  res.send('car delete post');
+  async.parallel(
+    {
+      car(callback) {
+        Cars.findById(req.params.id)
+          .exec(callback);
+      },
+    },
+    (err, results) => {
+      if (err) {
+        return next(err);
+      }
+
+      Cars.findByIdAndRemove(req.body.carid, (err) => {
+        if (err) {
+          return next(err);
+        }
+
+        res.redirect("/catalog/cars")
+      })
+    }
+  )
+
 }
