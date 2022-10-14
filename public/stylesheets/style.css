@@ -1,8 +1,13 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
+/*
+  ===========
+  Layout.pug
+  ===========
+*/
 
-a {
-  color: #00B7FF;
+.navbar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: 1fr;
+  justify-items: center;
+  align-items: center;
 }
