@@ -6,9 +6,8 @@ block content
 
     ul
       each product in energy_list
-        div
-          li
-            a(href=product.url) Name: #{product.name}
-            p Price: $#{product.price}
+        li.energyListItem
+          a(href=product.url) #{product.name}
+          p Price: $#{product.price}
 
     a(href="/catalog/energy/create") Add New Energy Product

@@ -1,13 +1,12 @@
 extends layout
 
 block content
-  div.truckContent
+  div.truckListContent
     h1= title
 
     ul
       each truck in truck_list
-        div
-          li
+          li.truckListItem
             a(href=truck.url) #{truck.name}
             p Trim: #{truck.trim}
             p Price: $#{truck.price}
