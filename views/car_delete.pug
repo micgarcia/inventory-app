@@ -1,17 +1,18 @@
 extends layout
 
 block content
-  h1= title
+  div.carDeleteContent
+    h1= title
 
-  ul
-    li Name: #{car.name}
-    li Description: #{car.description}
-    li Trim: #{car.trim}
-    li Price: $#{car.price}
-    li In-Stock: #{car.stock}
+    ul
+      li Name: #{car.name}
+      li Description: #{car.description}
+      li Trim: #{car.trim}
+      li Price: $#{car.price}
+      li In-Stock: #{car.stock}
 
-  p Are you sure you want to delete this car?
+    p Are you sure you want to delete this car?
 
-  form(method='POST' action='')
-    input(type='hidden', name="carid", required='true', value=car._id)
-    button(type='submit') Delete
+    form(method='POST' action='')
+      input(type='hidden', name="carid", required='true', value=car._id)
+      button(type='submit') Delete

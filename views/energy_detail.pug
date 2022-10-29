@@ -1,13 +1,14 @@
 extends layout
 
 block content
-  h1= title
+  div.energyDetailContent
+    h1= title
 
-  ul
-    li Description: #{energy.description}
-    li Price: $#{energy.price}
-    li In-Stock: #{energy.stock}
+    ul
+      li Description: #{energy.description}
+      li Price: $#{energy.price}
+      li In-Stock: #{energy.stock}
 
-  a(href=`/catalog/energy/${energy.id}/update`) Update Energy Product
-  a(href='/catalog/energy') Return To Energy Products
-  a(href=`/catalog/energy/${energy.id}/delete`) Delete Energy Product
+    a(href=`/catalog/energy/${energy.id}/update`) Update Energy Product
+    a(href='/catalog/energy') Return To Energy Products
+    a(href=`/catalog/energy/${energy.id}/delete`) Delete Energy Product

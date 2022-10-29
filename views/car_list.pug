@@ -1,14 +1,15 @@
 extends layout
 
 block content
-  h1= title
+  div.carListContent
+    h1= title
 
-  ul
-    each car in car_list
-      div
-        li
-          a(href=car.url) Name: #{car.name}
-          p Trim: #{car.trim}
-          p Price: $#{car.price}
+    ul
+      each car in car_list
+        div
+          li
+            a(href=car.url) Name: #{car.name}
+            p Trim: #{car.trim}
+            p Price: $#{car.price}
 
-  a(href="/catalog/cars/create") Add New Car
+    a(href="/catalog/cars/create") Add New Car

@@ -1,14 +1,15 @@
 extends layout
 
 block content
-  h1= title
+  div.truckDetailContent
+    h1= title
 
-  ul
-    li Description: #{truck.description}
-    li Trim: #{truck.trim}
-    li Price: $#{truck.price}
-    li In-Stock: #{truck.stock}
+    ul
+      li Description: #{truck.description}
+      li Trim: #{truck.trim}
+      li Price: $#{truck.price}
+      li In-Stock: #{truck.stock}
 
-  a(href=`/catalog/trucks/${truck.id}/update`) Update Truck
-  a(href='/catalog/trucks') Return To Trucks
-  a(href=`/catalog/trucks/${truck.id}/delete`) Delete Truck
+    a(href=`/catalog/trucks/${truck.id}/update`) Update Truck
+    a(href='/catalog/trucks') Return To Trucks
+    a(href=`/catalog/trucks/${truck.id}/delete`) Delete Truck

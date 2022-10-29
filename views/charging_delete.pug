@@ -1,20 +1,21 @@
 extends layout
 
 block content
-  h1= title
+  div.chargingDeleteContent
+    h1= title
 
-  ul
-    li Name: #{charging.name}
-    li Description: #{charging.description}
-    li Price: $#{charging.price}
-    li In-Stock: #{charging.stock}
-    li Compatible:
-      div
-        each product in charging.compatible
-          p #{product}
+    ul
+      li Name: #{charging.name}
+      li Description: #{charging.description}
+      li Price: $#{charging.price}
+      li In-Stock: #{charging.stock}
+      li Compatible:
+        div
+          each product in charging.compatible
+            p #{product}
 
-  p Are you sure you want to delete this energy product?
+    p Are you sure you want to delete this energy product?
 
-  form(method='POST' action='')
-    input(type='hidden', name="chargingid", required='true', value=charging._id)
-    button(type='submit') Delete
+    form(method='POST' action='')
+      input(type='hidden', name="chargingid", required='true', value=charging._id)
+      button(type='submit') Delete

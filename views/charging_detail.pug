@@ -1,17 +1,18 @@
 extends layout
 
 block content
-  h1= title
+  div.chargingDetailContent
+    h1= title
 
-  ul
-    li Description: #{charging.description}
-    li Price: $#{charging.price}
-    li In-Stock: #{charging.stock}
-    li Compatible:
-      div
-        each car in charging.compatible
-          p #{car}
+    ul
+      li Description: #{charging.description}
+      li Price: $#{charging.price}
+      li In-Stock: #{charging.stock}
+      li Compatible:
+        div
+          each car in charging.compatible
+            p #{car}
 
-  a(href=`/catalog/charging/${charging.id}/update`) Update Charging Product
-  a(href='/catalog/charging') Return To Charging Products
-  a(href=`/catalog/charging/${charging.id}/delete`) Delete Charging Product
+    a(href=`/catalog/charging/${charging.id}/update`) Update Charging Product
+    a(href='/catalog/charging') Return To Charging Products
+    a(href=`/catalog/charging/${charging.id}/delete`) Delete Charging Product

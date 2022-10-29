@@ -1,15 +1,15 @@
 extends layout
 
 block content
+  div.truckContent
+    h1= title
 
-  h1= title
+    ul
+      each truck in truck_list
+        div
+          li
+            a(href=truck.url) #{truck.name}
+            p Trim: #{truck.trim}
+            p Price: $#{truck.price}
 
-  ul
-    each truck in truck_list
-      div
-        li
-          a(href=truck.url) #{truck.name}
-          p Trim: #{truck.trim}
-          p Price: $#{truck.price}
-
-  a(href="/catalog/trucks/create") Add New Truck
+    a(href="/catalog/trucks/create") Add New Truck

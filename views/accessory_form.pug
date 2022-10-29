@@ -1,48 +1,49 @@
 extends layout
 
 block content
-  h1= title
+  div.accessoryFormContent
+    h1= title
 
-  form(method='POST' action='')
-    div
-      label(for='name') Name:
-      select(type='select' placeholder='Select Accessory' name='name' required='true')
-        option(value='Tesla Floor Mats 3Y' selected=(undefined===accessory ? false : (accessory.name==='Tesla Floor Mats 3Y' ? true : false))) Floor Mats 3/Y
-        option(value='Tesla Floor Mats SX' selected=(undefined===accessory ? false : (accessory.name==='Tesla Floor Mats SX' ? true : false))) Floor Mats S/X
-        option(value='Tesla Home Link' selected=(undefined===accessory ? false : (accessory.name==='Tesla Home Link' ? true : false))) Home Link
-
-    div
-      label(for='price') Price:
-      input(type='number' name='price' required='true' value=(undefined===accessory ? '' : accessory.price))
-
-    div
-      label(for='description') Description:
-      textarea(type='textarea' name='description' required='true') #{undefined===accessory ? '' : accessory.description}
-
-    div
-      label(for='stock') Stock:
-      input(type='number' name='stock' required='true' value=(undefined===accessory ? '' : accessory.stock))
-
-    fieldset(for='compatible')
-      legend Product is compatible with:
+    form(method='POST' action='')
+      div
+        label(for='name') Name:
+        select(type='select' placeholder='Select Accessory' name='name' required='true')
+          option(value='Tesla Floor Mats 3Y' selected=(undefined===accessory ? false : (accessory.name==='Tesla Floor Mats 3Y' ? true : false))) Floor Mats 3/Y
+          option(value='Tesla Floor Mats SX' selected=(undefined===accessory ? false : (accessory.name==='Tesla Floor Mats SX' ? true : false))) Floor Mats S/X
+          option(value='Tesla Home Link' selected=(undefined===accessory ? false : (accessory.name==='Tesla Home Link' ? true : false))) Home Link
 
       div
-        input(type='checkbox' name="compatible" value="Tesla Model 3" checked=(undefined===accessory ? false : (accessory.compatible.includes('Tesla Model 3') ? true : false)))
-        label(for="compatible") Model 3
+        label(for='price') Price:
+        input(type='number' name='price' required='true' value=(undefined===accessory ? '' : accessory.price))
 
-        input(type='checkbox' name="compatible" value="Tesla Model Y" checked=(undefined===accessory ? false : (accessory.compatible.includes('Tesla Model Y') ? true : false)))
-        label(for="compatible") Model Y
+      div
+        label(for='description') Description:
+        textarea(type='textarea' name='description' required='true') #{undefined===accessory ? '' : accessory.description}
 
-        input(type='checkbox' name="compatible" value="Tesla Model S" checked=(undefined===accessory ? false : (accessory.compatible.includes('Tesla Model S') ? true : false)))
-        label(for="compatible") Model S
+      div
+        label(for='stock') Stock:
+        input(type='number' name='stock' required='true' value=(undefined===accessory ? '' : accessory.stock))
 
-        input(type='checkbox' name="compatible" value="Tesla Model X" checked=(undefined===accessory ? false : (accessory.compatible.includes('Tesla Model X') ? true : false)))
-        label(for="compatible") Model X
+      fieldset(for='compatible')
+        legend Product is compatible with:
+
+        div
+          input(type='checkbox' name="compatible" value="Tesla Model 3" checked=(undefined===accessory ? false : (accessory.compatible.includes('Tesla Model 3') ? true : false)))
+          label(for="compatible") Model 3
+
+          input(type='checkbox' name="compatible" value="Tesla Model Y" checked=(undefined===accessory ? false : (accessory.compatible.includes('Tesla Model Y') ? true : false)))
+          label(for="compatible") Model Y
+
+          input(type='checkbox' name="compatible" value="Tesla Model S" checked=(undefined===accessory ? false : (accessory.compatible.includes('Tesla Model S') ? true : false)))
+          label(for="compatible") Model S
+
+          input(type='checkbox' name="compatible" value="Tesla Model X" checked=(undefined===accessory ? false : (accessory.compatible.includes('Tesla Model X') ? true : false)))
+          label(for="compatible") Model X
 
 
-    button(type='submit') Submit
+      button(type='submit') Submit
 
-  if errors
-    ul
-      for error in errors
-        li!= error.msg
+    if errors
+      ul
+        for error in errors
+          li!= error.msg

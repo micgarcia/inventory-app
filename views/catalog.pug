@@ -1,24 +1,25 @@
 extends layout
 
 block content
-  h1= title
+  div.catalogContent
+    h1= title
 
-  div
-    a(href="/catalog/cars") Cars
-    p #{data.cars_count} Car(s)
+    div
+      a(href="/catalog/cars") Cars
+      p #{data.cars_count} Car(s)
 
-  div
-    a(href='/catalog/trucks') Trucks
-    p #{data.trucks_count} Truck(s)
+    div
+      a(href='/catalog/trucks') Trucks
+      p #{data.trucks_count} Truck(s)
 
-  div
-    a(href='/catalog/energy') Energy
-    p #{data.energy_count} Energy Product(s)
+    div
+      a(href='/catalog/energy') Energy
+      p #{data.energy_count} Energy Product(s)
 
-  div
-    a(href='/catalog/charging') Charging
-    p #{data.charging_count} Charging Product(s)
+    div
+      a(href='/catalog/charging') Charging
+      p #{data.charging_count} Charging Product(s)
 
-  div
-    a(href='/catalog/accessory') Accessories
-    p #{data.accessory_count} Vehicle Accessories
+    div
+      a(href='/catalog/accessory') Accessories
+      p #{data.accessory_count} Vehicle Accessories

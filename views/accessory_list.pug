@@ -1,13 +1,14 @@
 extends layout
 
 block content
-  h1= title
+  div.accessoryContent
+    h1= title
 
-  ul
-    each product in accessory_list
-      div
-        li
-          a(href=product.url) Name: #{product.name}
-          p Price: $#{product.price}
+    ul
+      each product in accessory_list
+        div
+          li
+            a(href=product.url) Name: #{product.name}
+            p Price: $#{product.price}
 
-  a(href="/catalog/accessory/create") Add New Accessory
+    a(href="/catalog/accessory/create") Add New Accessory

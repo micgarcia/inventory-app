@@ -1,32 +1,33 @@
 extends layout
 
 block content
-  h1= title
+  div.energyFormContent
+    h1= title
 
-  form(method='POST' action='')
-    div
-      label(for='name') Name:
-      select(type='select' placeholder='Select Energy Product' name='name' required='true')
-        option(value='Tesla Solar Panels' selected=(undefined===energy ? false : (energy.name==='Tesla Solar Panels' ? true : false))) Solar Panels
-        option(value='Tesla Solar Roof' selected=(undefined===energy ? false : (energy.name==='Tesla Solar Roof' ? true : false))) Solar Roof
-        option(value='Tesla Powerwall' selected=(undefined===energy ? false : (energy.name==='Tesla Powerwall' ? true : false))) Powerwall
-        option(value='Tesla Megapack' selected=(undefined===energy ? false : (energy.name==='Tesla Megapack' ? true : false))) Megapack
+    form(method='POST' action='')
+      div
+        label(for='name') Name:
+        select(type='select' placeholder='Select Energy Product' name='name' required='true')
+          option(value='Tesla Solar Panels' selected=(undefined===energy ? false : (energy.name==='Tesla Solar Panels' ? true : false))) Solar Panels
+          option(value='Tesla Solar Roof' selected=(undefined===energy ? false : (energy.name==='Tesla Solar Roof' ? true : false))) Solar Roof
+          option(value='Tesla Powerwall' selected=(undefined===energy ? false : (energy.name==='Tesla Powerwall' ? true : false))) Powerwall
+          option(value='Tesla Megapack' selected=(undefined===energy ? false : (energy.name==='Tesla Megapack' ? true : false))) Megapack
 
-    div
-      label(for='price') Price:
-      input(type='number' name='price' required='true' value=(undefined===energy ? '' : energy.price))
+      div
+        label(for='price') Price:
+        input(type='number' name='price' required='true' value=(undefined===energy ? '' : energy.price))
 
-    div
-      label(for='description') Description:
-      textarea(type='textarea' name='description' required='true') #{undefined===energy ? '' : energy.description}
+      div
+        label(for='description') Description:
+        textarea(type='textarea' name='description' required='true') #{undefined===energy ? '' : energy.description}
 
-    div
-      label(for='stock') Stock:
-      input(type='number' name='stock' required='true' value=(undefined===energy ? '' : energy.stock))
+      div
+        label(for='stock') Stock:
+        input(type='number' name='stock' required='true' value=(undefined===energy ? '' : energy.stock))
 
-    button(type='submit') Submit
+      button(type='submit') Submit
 
-  if errors
-    ul
-      for error in errors
-        li!= error.msg
+    if errors
+      ul
+        for error in errors
+          li!= error.msg

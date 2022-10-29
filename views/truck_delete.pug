@@ -1,17 +1,18 @@
 extends layout
 
 block content
-  h1= title
+  div.truckDeleteContent
+    h1= title
 
-  ul
-    li Name: #{truck.name}
-    li Description: #{truck.description}
-    li Trim: #{truck.trim}
-    li Price: $#{truck.price}
-    li In-Stock: #{truck.stock}
+    ul
+      li Name: #{truck.name}
+      li Description: #{truck.description}
+      li Trim: #{truck.trim}
+      li Price: $#{truck.price}
+      li In-Stock: #{truck.stock}
 
-  p Are you sure you want to delete this truck?
+    p Are you sure you want to delete this truck?
 
-  form(method='POST' action='')
-    input(type='hidden', name="truckid", required='true', value=truck._id)
-    button(type='submit') Delete
+    form(method='POST' action='')
+      input(type='hidden', name="truckid", required='true', value=truck._id)
+      button(type='submit') Delete
