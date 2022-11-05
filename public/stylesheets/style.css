@@ -98,7 +98,14 @@ body {
 .indexContent {
   justify-self: center;
   display: grid;
+  grid-template-rows: minmax(50px, 100px);
   justify-items: center;
+  align-items: center;
+}
+
+.indexContent h1 {
+  font-weight: bold;
+  font-size: 26px;
 }
 
 
@@ -114,11 +121,26 @@ body {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: minmax(20px, 50px) repeat(3, 1fr);
   justify-items: center;
+  align-items: center;
 }
 
 .catalogContent h1 {
   grid-row: 1 / 2;
   grid-column: 1 / 3;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.catalogContent div {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.catalogContent div a {
+  font-weight: bold;
+  font-size: 20px;
+  padding: 1em;
 }
 
 /*
@@ -133,6 +155,12 @@ body {
   grid-template-columns: 1fr;
   grid-template-rows: minmax(20px, 50px) 2fr minmax(50px, 100px);
   justify-items: center;
+  align-items: center;
+}
+
+.carListContent h1 {
+  font-weight: bold;
+  font-size: 22px;
 }
 
 .carListContent ul {
@@ -146,6 +174,63 @@ body {
   justify-self: center;
 }
 
+/*
+  ===========
+  Car Detail
+  ===========
+*/
+
+.carDetailContent {
+  display: grid;
+  grid-template-rows: minmax(25px, 75px) minmax(100px, 200px) minmax(25px, 150px);
+  justify-items: center;
+  align-items: center;
+}
+
+.carDetailContent h1 {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.carDetailContent ul {
+  display: grid;
+  font-size: 18px;
+}
+
+.carDetailContent nav {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+}
+
+/*
+  ===========
+  Car Form Content
+  ===========
+*/
+
+.carFormContent {
+  display: grid;
+  justify-items: center;
+  grid-template-rows: minmax(25px, 75px);
+}
+
+.carFormContent h1 {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.carFormContent form {
+  display: grid;
+  justify-items: start;
+  max-height: 400px;
+}
+
+.carFormContent form label {
+  font-weight: bold;
+  font-size: 18px;
+  padding-right: 0.5em;
+}
 
 /*
   ===========
@@ -159,6 +244,12 @@ body {
   grid-template-columns: 1fr;
   grid-template-rows: minmax(20px, 50px) 2fr minmax(50px, 100px);
   justify-items: center;
+  align-items: center;
+}
+
+.truckListContent h1 {
+  font-weight: bold;
+  font-size: 22px;
 }
 
 .truckListContent ul {
@@ -174,6 +265,64 @@ body {
 
 /*
   ===========
+  Truck Detail
+  ===========
+*/
+
+.truckDetailContent {
+  display: grid;
+  grid-template-rows: minmax(25px, 75px) minmax(100px, 200px) minmax(25px, 150px);
+  justify-items: center;
+  align-items: center;
+}
+
+.truckDetailContent h1 {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.truckDetailContent ul {
+  display: grid;
+  font-size: 18px;
+}
+
+.truckDetailContent nav {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+}
+
+/*
+  ===========
+  Truck Form Content
+  ===========
+*/
+
+.truckFormContent {
+  display: grid;
+  justify-items: center;
+  grid-template-rows: minmax(25px, 75px);
+}
+
+.truckFormContent h1 {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.truckFormContent form {
+  display: grid;
+  justify-items: start;
+  max-height: 400px;
+}
+
+.truckFormContent form label {
+  font-weight: bold;
+  font-size: 18px;
+  padding-right: 0.5em;
+}
+
+/*
+  ===========
   Energy Content
   ===========
 */
@@ -184,6 +333,12 @@ body {
   grid-template-columns: 1fr;
   grid-template-rows: minmax(20px, 50px) 2fr minmax(50px, 100px);
   justify-items: center;
+  align-items: center;
+}
+
+.energyListContent h1 {
+  font-weight: bold;
+  font-size: 22px;
 }
 
 .energyListContent ul {
@@ -195,6 +350,64 @@ body {
 
 .energyListItem {
   justify-self: center;
+}
+
+/*
+  ===========
+  Energy Detail
+  ===========
+*/
+
+.energyDetailContent {
+  display: grid;
+  grid-template-rows: minmax(25px, 75px) minmax(100px, 200px) minmax(25px, 150px);
+  justify-items: center;
+  align-items: center;
+}
+
+.energyDetailContent h1 {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.energyDetailContent ul {
+  display: grid;
+  font-size: 18px;
+}
+
+.energyDetailContent nav {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+}
+
+/*
+  ===========
+  Energy Form Content
+  ===========
+*/
+
+.energyFormContent {
+  display: grid;
+  justify-items: center;
+  grid-template-rows: minmax(25px, 75px);
+}
+
+.energyFormContent h1 {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.energyFormContent form {
+  display: grid;
+  justify-items: start;
+  max-height: 400px;
+}
+
+.energyFormContent form label {
+  font-weight: bold;
+  font-size: 18px;
+  padding-right: 0.5em;
 }
 
 
@@ -210,6 +423,12 @@ body {
   grid-template-columns: 1fr;
   grid-template-rows: minmax(20px, 50px) 2fr minmax(50px, 100px);
   justify-items: center;
+  align-items: center;
+}
+
+.chargingListContent h1 {
+  font-weight: bold;
+  font-size: 22px;
 }
 
 .chargingListContent ul {
@@ -225,6 +444,64 @@ body {
 
 /*
   ===========
+  Charging Detail
+  ===========
+*/
+
+.chargingDetailContent {
+  display: grid;
+  grid-template-rows: minmax(25px, 75px) minmax(100px, 200px) minmax(25px, 150px);
+  justify-items: center;
+  align-items: center;
+}
+
+.chargingDetailContent h1 {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.chargingDetailContent ul {
+  display: grid;
+  font-size: 18px;
+}
+
+.chargingDetailContent nav {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+}
+
+/*
+  ===========
+  Charging Form Content
+  ===========
+*/
+
+.chargingFormContent {
+  display: grid;
+  justify-items: center;
+  grid-template-rows: minmax(25px, 75px);
+}
+
+.chargingFormContent h1 {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.chargingFormContent form {
+  display: grid;
+  justify-items: start;
+  max-height: 400px;
+}
+
+.chargingFormContent form label {
+  font-weight: bold;
+  font-size: 18px;
+  padding-right: 0.5em;
+}
+
+/*
+  ===========
   Accessory Content
   ===========
 */
@@ -235,6 +512,12 @@ body {
   grid-template-columns: 1fr;
   grid-template-rows: minmax(20px, 50px) 2fr minmax(50px, 100px);
   justify-items: center;
+  align-items: center;
+}
+
+.accessoryListContent h1 {
+  font-weight: bold;
+  font-size: 22px;
 }
 
 .accessoryListContent ul {
@@ -246,4 +529,62 @@ body {
 
 .accessoryListItem {
   justify-self: center;
+}
+
+/*
+  ===========
+  Accessory Detail
+  ===========
+*/
+
+.accessoryDetailContent {
+  display: grid;
+  grid-template-rows: minmax(25px, 75px) minmax(100px, 200px) minmax(25px, 150px);
+  justify-items: center;
+  align-items: center;
+}
+
+.accessoryDetailContent h1 {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.accessoryDetailContent ul {
+  display: grid;
+  font-size: 18px;
+}
+
+.accessoryDetailContent nav {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+}
+
+/*
+  ===========
+  Accessory Form Content
+  ===========
+*/
+
+.accessoryFormContent {
+  display: grid;
+  justify-items: center;
+  grid-template-rows: minmax(25px, 75px);
+}
+
+.accessoryFormContent h1 {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.accessoryFormContent form {
+  display: grid;
+  justify-items: start;
+  max-height: 400px;
+}
+
+.accessoryFormContent form label {
+  font-weight: bold;
+  font-size: 18px;
+  padding-right: 0.5em;
 }

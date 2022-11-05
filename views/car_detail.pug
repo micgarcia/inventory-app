@@ -10,6 +10,7 @@ block content
       li Price: $#{car.price}
       li In-Stock: #{car.stock}
 
-    a(href=`/catalog/cars/${car.id}/update`) Update Car
-    a(href='/catalog/cars') Return To Cars
-    a(href=`/catalog/cars/${car.id}/delete`) Delete Car
+    nav
+      a(href=`/catalog/cars/${car.id}/update`) Update Car
+      a(href='/catalog/cars') Return To Cars
+      a(href=`/catalog/cars/${car.id}/delete`) Delete Car

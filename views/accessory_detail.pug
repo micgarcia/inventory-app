@@ -12,7 +12,7 @@ block content
         div
           each car in accessory.compatible
             p #{car}
-
-    a(href=`/catalog/accessory/${accessory.id}/update`) Update Accessory
-    a(href='/catalog/accessory') Return To Accessories
-    a(href=`/catalog/accessory/${accessory.id}/delete`) Delete Accessory
+    nav
+      a(href=`/catalog/accessory/${accessory.id}/update`) Update Accessory
+      a(href='/catalog/accessory') Return To Accessories
+      a(href=`/catalog/accessory/${accessory.id}/delete`) Delete Accessory

@@ -9,7 +9,7 @@ block content
       li Trim: #{truck.trim}
       li Price: $#{truck.price}
       li In-Stock: #{truck.stock}
-
-    a(href=`/catalog/trucks/${truck.id}/update`) Update Truck
-    a(href='/catalog/trucks') Return To Trucks
-    a(href=`/catalog/trucks/${truck.id}/delete`) Delete Truck
+    nav
+      a(href=`/catalog/trucks/${truck.id}/update`) Update Truck
+      a(href='/catalog/trucks') Return To Trucks
+      a(href=`/catalog/trucks/${truck.id}/delete`) Delete Truck

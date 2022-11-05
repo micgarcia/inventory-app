@@ -12,7 +12,7 @@ block content
         div
           each car in charging.compatible
             p #{car}
-
-    a(href=`/catalog/charging/${charging.id}/update`) Update Charging Product
-    a(href='/catalog/charging') Return To Charging Products
-    a(href=`/catalog/charging/${charging.id}/delete`) Delete Charging Product
+    nav
+      a(href=`/catalog/charging/${charging.id}/update`) Update Charging Product
+      a(href='/catalog/charging') Return To Charging Products
+      a(href=`/catalog/charging/${charging.id}/delete`) Delete Charging Product
