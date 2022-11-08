@@ -47,6 +47,10 @@ table {
 	border-spacing: 0;
 }
 
+button {
+  font-family: inherit;
+}
+
 /*
   ===========
   Layout.pug
@@ -342,6 +346,54 @@ body {
   cursor: pointer;
 }
 
+
+.carDeleteContent {
+  display: grid;
+  justify-self: center;
+  align-items: center;
+}
+
+.carDeleteContent h1 {
+  font-size: 24px;
+  font-weight: bold;
+  justify-self: center;
+}
+
+.carDeleteContent ul {
+  display: grid;
+  font-size: 20px;
+  row-gap: 0.5em;
+}
+
+.carDeleteContent p {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.carDeleteContent form {
+  align-self: start;
+  display: grid;
+  justify-items: center;
+  align-items: start;
+}
+
+.carDeleteContent form button {
+  padding: 0.5em 1em;
+  background-color: #C9D6DF;
+  font-size: 18px;
+  border-style: none;
+  border-radius: 5px;
+  font-family: inherit;
+}
+
+.carDeleteContent form button:hover {
+  background-color: #52616B;
+  color: #F0F5F9;
+  cursor: pointer;
+}
+
+
+
 /*
   ===========
   Truck Content
@@ -497,6 +549,52 @@ body {
 }
 
 .truckFormContent form button:hover {
+  background-color: #52616B;
+  color: #F0F5F9;
+  cursor: pointer;
+}
+
+
+.truckDeleteContent {
+  display: grid;
+  justify-self: center;
+  align-items: center;
+}
+
+.truckDeleteContent h1 {
+  font-size: 24px;
+  font-weight: bold;
+  justify-self: center;
+}
+
+.truckDeleteContent ul {
+  display: grid;
+  font-size: 20px;
+  row-gap: 0.5em;
+}
+
+.truckDeleteContent p {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.truckDeleteContent form {
+  align-self: start;
+  display: grid;
+  justify-items: center;
+  align-items: start;
+}
+
+.truckDeleteContent form button {
+  padding: 0.5em 1em;
+  background-color: #C9D6DF;
+  font-size: 18px;
+  border-style: none;
+  border-radius: 5px;
+  font-family: inherit;
+}
+
+.truckDeleteContent form button:hover {
   background-color: #52616B;
   color: #F0F5F9;
   cursor: pointer;
@@ -663,6 +761,51 @@ body {
 }
 
 
+.energyDeleteContent {
+  display: grid;
+  justify-self: center;
+  align-items: center;
+}
+
+.energyDeleteContent h1 {
+  font-size: 24px;
+  font-weight: bold;
+  justify-self: center;
+}
+
+.energyDeleteContent ul {
+  display: grid;
+  font-size: 20px;
+  row-gap: 0.5em;
+}
+
+.energyDeleteContent p {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.energyDeleteContent form {
+  align-self: start;
+  display: grid;
+  justify-items: center;
+  align-items: start;
+}
+
+.energyDeleteContent form button {
+  padding: 0.5em 1em;
+  background-color: #C9D6DF;
+  font-size: 18px;
+  border-style: none;
+  border-radius: 5px;
+  font-family: inherit;
+}
+
+.energyDeleteContent form button:hover {
+  background-color: #52616B;
+  color: #F0F5F9;
+  cursor: pointer;
+}
+
 /*
   ===========
   Charging Content
@@ -823,6 +966,52 @@ body {
   cursor: pointer;
 }
 
+
+.chargingDeleteContent {
+  display: grid;
+  justify-self: center;
+  align-items: center;
+}
+
+.chargingDeleteContent h1 {
+  font-size: 24px;
+  font-weight: bold;
+  justify-self: center;
+}
+
+.chargingDeleteContent ul {
+  display: grid;
+  font-size: 20px;
+  row-gap: 0.5em;
+}
+
+.chargingDeleteContent p {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.chargingDeleteContent form {
+  align-self: start;
+  display: grid;
+  justify-items: center;
+  align-items: start;
+}
+
+.chargingDeleteContent form button {
+  padding: 0.5em 1em;
+  background-color: #C9D6DF;
+  font-size: 18px;
+  border-style: none;
+  border-radius: 5px;
+  font-family: inherit;
+}
+
+.chargingDeleteContent form button:hover {
+  background-color: #52616B;
+  color: #F0F5F9;
+  cursor: pointer;
+}
+
 /*
   ===========
   Accessory Content
@@ -978,6 +1167,52 @@ body {
 }
 
 .accessoryFormContent form button:hover {
+  background-color: #52616B;
+  color: #F0F5F9;
+  cursor: pointer;
+}
+
+
+.accessoryDeleteContent {
+  display: grid;
+  justify-self: center;
+  align-items: center;
+}
+
+.accessoryDeleteContent h1 {
+  font-size: 24px;
+  font-weight: bold;
+  justify-self: center;
+}
+
+.accessoryDeleteContent ul {
+  display: grid;
+  font-size: 20px;
+  row-gap: 0.5em;
+}
+
+.accessoryDeleteContent p {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.accessoryDeleteContent form {
+  align-self: start;
+  display: grid;
+  justify-items: center;
+  align-items: start;
+}
+
+.accessoryDeleteContent form button {
+  padding: 0.5em 1em;
+  background-color: #C9D6DF;
+  font-size: 18px;
+  border-style: none;
+  border-radius: 5px;
+  font-family: inherit;
+}
+
+.accessoryDeleteContent form button:hover {
   background-color: #52616B;
   color: #F0F5F9;
   cursor: pointer;
