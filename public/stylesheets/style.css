@@ -69,6 +69,7 @@ body {
 
   background-color: #F0F5F9;
   color: #52616B;
+  font-family: 'Raleway', sans-serif;
 
 }
 
@@ -94,6 +95,7 @@ body {
   text-align: center;
   text-justify: center;
   font-size: 20px;
+  font-weight: 500;
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
@@ -285,6 +287,7 @@ body {
   background-color: #C9D6DF;
   padding: 0.5em;
   border-radius: 5px;
+
 }
 
 .carDetailContent nav a:hover {
