@@ -263,13 +263,28 @@ body {
 
 .carDetailContent ul {
   display: grid;
-  font-size: 18px;
+  font-size: 20px;
+  row-gap: 0.5em;
 }
 
 .carDetailContent nav {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
+}
+
+.carDetailContent nav a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #52616B;
+  font-weight: bold;
+  background-color: #C9D6DF;
+  padding: 0.5em;
+  border-radius: 5px;
+}
+
+.carDetailContent nav a:hover {
+  color: #F0F5F9;
 }
 
 /*
@@ -382,13 +397,28 @@ body {
 
 .truckDetailContent ul {
   display: grid;
-  font-size: 18px;
+  font-size: 20px;
+  row-gap: 0.5em;
 }
 
 .truckDetailContent nav {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
+}
+
+.truckDetailContent nav a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #52616B;
+  font-weight: bold;
+  background-color: #C9D6DF;
+  padding: 0.5em;
+  border-radius: 5px;
+}
+
+.truckDetailContent nav a:hover {
+  color: #F0F5F9;
 }
 
 /*
@@ -501,13 +531,28 @@ body {
 
 .energyDetailContent ul {
   display: grid;
-  font-size: 18px;
+  font-size: 20px;
+  row-gap: 0.5em;
 }
 
 .energyDetailContent nav {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
+}
+
+.energyDetailContent nav a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #52616B;
+  font-weight: bold;
+  background-color: #C9D6DF;
+  padding: 0.5em;
+  border-radius: 5px;
+}
+
+.energyDetailContent nav a:hover {
+  color: #F0F5F9;
 }
 
 /*
@@ -621,13 +666,28 @@ body {
 
 .chargingDetailContent ul {
   display: grid;
-  font-size: 18px;
+  font-size: 20px;
+  row-gap: 0.5em;
 }
 
 .chargingDetailContent nav {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
+}
+
+.chargingDetailContent nav a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #52616B;
+  font-weight: bold;
+  background-color: #C9D6DF;
+  padding: 0.5em;
+  border-radius: 5px;
+}
+
+.chargingDetailContent nav a:hover {
+  color: #F0F5F9;
 }
 
 /*
@@ -740,13 +800,28 @@ body {
 
 .accessoryDetailContent ul {
   display: grid;
-  font-size: 18px;
+  font-size: 20px;
+  row-gap: 0.5em;
 }
 
 .accessoryDetailContent nav {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
+}
+
+.accessoryDetailContent nav a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #52616B;
+  font-weight: bold;
+  background-color: #C9D6DF;
+  padding: 0.5em;
+  border-radius: 5px;
+}
+
+.accessoryDetailContent nav a:hover {
+  color: #F0F5F9;
 }
 
 /*
