@@ -225,6 +225,9 @@ body {
 .carListItem {
   justify-self: center;
   display: grid;
+  background-color: #C9D6DF;
+  padding: 1em;
+  border-radius: 5px;
 }
 
 .carListItem a {
@@ -233,8 +236,10 @@ body {
   font-size: 18px;
   color: #52616B;
   margin-bottom: 0.5em;
-  background-color: #F0F5F9;
-  padding: 0;
+}
+
+.carListItem a:hover {
+  color: #F0F5F9;
 }
 
 
@@ -340,6 +345,9 @@ body {
 .truckListItem {
   justify-self: center;
   display: grid;
+  background-color: #C9D6DF;
+  padding: 1em;
+  border-radius: 5px;
 }
 
 .truckListItem a {
@@ -348,8 +356,10 @@ body {
   font-size: 18px;
   color: #52616B;
   margin-bottom: 0.5em;
-  background-color: #F0F5F9;
-  padding: 0;
+}
+
+.truckListItem a:hover {
+  color: #F0F5F9;
 }
 
 /*
@@ -454,6 +464,9 @@ body {
 .energyListItem {
   justify-self: center;
   display: grid;
+  background-color: #C9D6DF;
+  padding: 1em;
+  border-radius: 5px;
 }
 
 .energyListItem a {
@@ -462,8 +475,10 @@ body {
   font-size: 18px;
   color: #52616B;
   margin-bottom: 0.5em;
-  background-color: #F0F5F9;
-  padding: 0;
+}
+
+.energyListItem a:hover {
+  color: #F0F5F9;
 }
 
 /*
@@ -569,6 +584,9 @@ body {
 .chargingListItem {
   justify-self: center;
   display: grid;
+  background-color: #C9D6DF;
+  padding: 1em;
+  border-radius: 5px;
 }
 
 .chargingListItem a {
@@ -577,8 +595,10 @@ body {
   font-size: 18px;
   color: #52616B;
   margin-bottom: 0.5em;
-  background-color: #F0F5F9;
-  padding: 0;
+}
+
+.chargingListItem a:hover {
+  color: #F0F5F9;
 }
 
 /*
@@ -683,6 +703,9 @@ body {
 .accessoryListItem {
   justify-self: center;
   display: grid;
+  background-color: #C9D6DF;
+  padding: 1em;
+  border-radius: 5px;
 }
 
 .accessoryListItem a {
@@ -691,8 +714,10 @@ body {
   font-size: 18px;
   color: #52616B;
   margin-bottom: 0.5em;
-  background-color: #F0F5F9;
-  padding: 0;
+}
+
+.accessoryListItem a:hover {
+  color: #F0F5F9;
 }
 
 /*
