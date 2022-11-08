@@ -316,6 +316,32 @@ body {
   padding-right: 0.5em;
 }
 
+.carFormContent form input, select, textarea {
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 4px;
+  border-color: #52616B;
+  padding: 0.25em;
+  font-family: inherit;
+}
+
+.carFormContent form button {
+  font-family: inherit;
+  padding: 0.5em 1em;
+  max-height: 50%;
+  justify-self: center;
+  font-size: 18px;
+  background-color: #C9D6DF;
+  border-style: none;
+  border-radius: 5px;
+}
+
+.carFormContent form button:hover {
+  background-color: #52616B;
+  color: #F0F5F9;
+  cursor: pointer;
+}
+
 /*
   ===========
   Truck Content
@@ -450,6 +476,32 @@ body {
   padding-right: 0.5em;
 }
 
+.truckFormContent form input, select, textarea {
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 4px;
+  border-color: #52616B;
+  padding: 0.25em;
+  font-family: inherit;
+}
+
+.truckFormContent form button {
+  font-family: inherit;
+  padding: 0.5em 1em;
+  max-height: 50%;
+  justify-self: center;
+  font-size: 18px;
+  background-color: #C9D6DF;
+  border-style: none;
+  border-radius: 5px;
+}
+
+.truckFormContent form button:hover {
+  background-color: #52616B;
+  color: #F0F5F9;
+  cursor: pointer;
+}
+
 /*
   ===========
   Energy Content
@@ -582,6 +634,32 @@ body {
   font-weight: bold;
   font-size: 18px;
   padding-right: 0.5em;
+}
+
+.energyFormContent form input, select, textarea {
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 4px;
+  border-color: #52616B;
+  padding: 0.25em;
+  font-family: inherit;
+}
+
+.energyFormContent form button {
+  font-family: inherit;
+  padding: 0.5em 1em;
+  max-height: 50%;
+  justify-self: center;
+  font-size: 18px;
+  background-color: #C9D6DF;
+  border-style: none;
+  border-radius: 5px;
+}
+
+.energyFormContent form button:hover {
+  background-color: #52616B;
+  color: #F0F5F9;
+  cursor: pointer;
 }
 
 
@@ -719,6 +797,32 @@ body {
   padding-right: 0.5em;
 }
 
+.chargingFormContent form input, select, textarea {
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 4px;
+  border-color: #52616B;
+  padding: 0.25em;
+  font-family: inherit;
+}
+
+.chargingFormContent form button {
+  font-family: inherit;
+  padding: 0.5em 1em;
+  max-height: 50%;
+  justify-self: center;
+  font-size: 18px;
+  background-color: #C9D6DF;
+  border-style: none;
+  border-radius: 5px;
+}
+
+.chargingFormContent form button:hover {
+  background-color: #52616B;
+  color: #F0F5F9;
+  cursor: pointer;
+}
+
 /*
   ===========
   Accessory Content
@@ -851,4 +955,30 @@ body {
   font-weight: bold;
   font-size: 18px;
   padding-right: 0.5em;
+}
+
+.accessoryFormContent form input, select, textarea {
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 4px;
+  border-color: #52616B;
+  padding: 0.25em;
+  font-family: inherit;
+}
+
+.accessoryFormContent form button {
+  font-family: inherit;
+  padding: 0.5em 1em;
+  max-height: 50%;
+  justify-self: center;
+  font-size: 18px;
+  background-color: #C9D6DF;
+  border-style: none;
+  border-radius: 5px;
+}
+
+.accessoryFormContent form button:hover {
+  background-color: #52616B;
+  color: #F0F5F9;
+  cursor: pointer;
 }
