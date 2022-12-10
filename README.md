@@ -2,7 +2,7 @@
 
 ### Styling and Layout still in progress
 
-## Link will take a minute to load
+### Link will take a minute to load
 #### Live App URL:
 https://nodejs-inventory-app.onrender.com
 
