@@ -1,8 +1,8 @@
 # Inventory App
 
 ### Styling and Layout still in progress
-The app is now live at the link below, however the CSS has not been completed so it is mainly barebones HTML at the moment.
 
+## Link will take a minute to load
 #### Live App URL:
 https://nodejs-inventory-app.onrender.com
 
